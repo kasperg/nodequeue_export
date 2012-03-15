@@ -134,7 +134,7 @@ function _nodequeue_export_format_queue_data($queue) {
     'new' => TRUE,
   );
 
-  if (empty($queue->owner)) {
+  if (empty($queue->owner) || $queue->owner == 'nodequeue') {
     $queue_data['add_subqueue'] = array($queue->title);
   }
 
